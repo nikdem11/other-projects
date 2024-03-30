@@ -154,17 +154,17 @@ void showForecast(String city, String lat, String lon) {
     lastForecastMillis = currentMillis;  // Aktualizuj czas ostatniego wywołania
   
     // pobieranie informacji o bieżącej pogodzie
-    String serverPath1 = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=f7e7fab922e3fb87b10f0c8258f30061&units=metric";
+    String serverPath1 = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=XXXX&units=metric";
     jsonBuffer = httpGETRequest(serverPath1.c_str());
     JSONVar myObj1 = JSON.parse(jsonBuffer);
 
     // pobieranie informacji o bieżącej jakości powietrza
-    String serverPath2 = "http://api.openweathermap.org/data/2.5/air_pollution?lat=" + lat + "&lon=" + lon + "&appid=f7e7fab922e3fb87b10f0c8258f30061";
+    String serverPath2 = "http://api.openweathermap.org/data/2.5/air_pollution?lat=" + lat + "&lon=" + lon + "&appid=XXXX";
     jsonBuffer = httpGETRequest(serverPath2.c_str());
     JSONVar myObj2 = JSON.parse(jsonBuffer);
 
     // pobieranie informacji o prognozie pogody (3 dni do przodu, wartości co 3h)
-    String serverPath3 = "http://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=f7e7fab922e3fb87b10f0c8258f30061&units=metric";
+    String serverPath3 = "http://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=XXXX&units=metric";
     jsonBuffer = httpGETRequest(serverPath3.c_str());
     JSONVar myObj3 = JSON.parse(jsonBuffer);
     
