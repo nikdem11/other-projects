@@ -237,7 +237,7 @@ void loop() {
 
   switch(buttonCnt) {
     case 0:
-      showForecast("Tychy", "50.104916", "18.980780"); 
+      showForecast("Tychy", "50.128250", "18.988600"); 
       break;
     case 1:
       showTemp();
